@@ -1,0 +1,139 @@
+:root {
+  /* Palette: The Cost of Flight */
+  --bg-obsidian: #0a0e13;
+  --bg-surface: #11161e;
+  --bg-elevated: #171e28;
+  --border-hairline: rgba(184, 193, 200, 0.14);
+  --border-strong: rgba(184, 193, 200, 0.28);
+
+  --ink-primary: #f2efe7;
+  --ink-aluminum: #b8c1c8;
+  --ink-muted: #84909b;
+
+  --accent-amber: #d99a45;
+  --accent-amber-soft: rgba(217, 154, 69, 0.14);
+  --accent-crimson: #b94c44;
+  --accent-crimson-soft: rgba(185, 76, 68, 0.16);
+  --accent-tech-blue: #638db0;
+  --accent-tech-blue-soft: rgba(99, 141, 176, 0.14);
+
+  /* Typography — 100% offline system stacks, zero CDN */
+  --font-display: "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Microsoft YaHei", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "SFMono-Regular", "Cascadia Mono", "Menlo", "Consolas", ui-monospace, monospace;
+
+  /* Motion durations */
+  --dur-nav: 220ms;
+  --dur-panel: 280ms;
+  --dur-scene: 820ms;
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  background-color: var(--bg-obsidian);
+  color: var(--ink-primary);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-obsidian);
+  color: var(--ink-primary);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: clip;
+}
+
+.font-display-track {
+  font-family: var(--font-display);
+  letter-spacing: 0.14em;
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.prose-measure {
+  max-width: 44rem;
+  line-height: 1.75;
+}
+
+/* Single directional key-light beam reveal for Act 0 */
+@keyframes keyLightSweep {
+  0% {
+    opacity: 0;
+    transform: translate3d(-18px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes subtleFadeRise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.anim-keylight {
+  animation: keyLightSweep var(--dur-scene) var(--ease-settle) both;
+}
+
+.anim-rise {
+  animation: subtleFadeRise 620ms var(--ease-settle) both;
+}
+
+.anim-rise-delay-1 {
+  animation: subtleFadeRise 620ms var(--ease-settle) 160ms both;
+}
+
+.anim-rise-delay-2 {
+  animation: subtleFadeRise 620ms var(--ease-settle) 320ms both;
+}
+
+/* Reduced motion & explicit user motionMode='reduced' */
+[data-motion="reduced"] *,
+[data-motion="reduced"] *::before,
+[data-motion="reduced"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessible high-contrast focus indicator */
+:focus-visible {
+  outline: 2px solid var(--accent-amber);
+  outline-offset: 2px;
+}
+
+/* Subtle aviation hairline grid background */
+.aviation-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(184, 193, 200, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(184, 193, 200, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+[data-quality="lite"] .aviation-grid-bg {
+  background-image: none;
+}
