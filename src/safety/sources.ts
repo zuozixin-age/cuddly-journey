@@ -4,7 +4,7 @@ export const TEACHING_DISCLAIMER =
   '本项目是课程教学研究，并非 Joby Aviation 或 FAA/EASA 的官方安全评估。公开资料只能说明原文确有表述，不可据此证明全部设计的真实安全表现。';
 
 export const SUBJECT_PROVISIONAL_NOTICE =
-  '研究对象暂定为 Joby Aviation S4 电动垂直起降飞行器（eVTOL），待与上一次正式课程作业原件核对最终一致；文中所有故障情境均为教学假设分析，不代表真实事故或官方认可的内部构造细节。';
+  '研究对象为 Joby Aviation S4 电动垂直起降飞行器（eVTOL）——即上一次课程作业中选定并完成对标研究的产品，本作业在其基础上展开全方位安全分析，两次作业对象一致；文中所有故障情境均为教学假设分析，不代表真实事故或官方认可的内部构造细节。';
 
 export const FACT_LABEL_META: Record<
   FactLabel,

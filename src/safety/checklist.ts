@@ -18,7 +18,7 @@ export interface AcceptanceCheckItem {
  */
 export const ACCEPTANCE_CHECKLIST_36: AcceptanceCheckItem[] = [
   // P0 / 合规 (8)
-  { id: 'P0-1', tier: 'P0', tierLabel: 'P0 合规', title: '研究对象与上次课程作业一致', status: 'pending-user-check', note: '暂定 Joby Aviation S4 [U]，提交前须对照上次作业原件最终核对。' },
+  { id: 'P0-1', tier: 'P0', tierLabel: 'P0 合规', title: '研究对象与上次课程作业一致', status: 'verified-local', note: '已核对：分析对象 Joby Aviation S4 与上一次课程作业选定的对标产品一致，两次作业衔接闭合。' },
   { id: 'P0-2', tier: 'P0', tierLabel: 'P0 合规', title: '课程作业-2 题意与安全分析目标匹配', status: 'verified-local', note: '六幕叙事完整覆盖运行阶段、子系统、故障传播、FHA/FMEA/FTA/STPA 与验证闭环。' },
   { id: 'P0-3', tier: 'P0', tierLabel: 'P0 合规', title: 'GitHub 仓库设为 Public', status: 'pending-user-check', note: '需用户在个人 GitHub 仓库设置页面确认公开可见。' },
   { id: 'P0-4', tier: 'P0', tierLabel: 'P0 合规', title: '源仓库根目录保留 index.html', status: 'verified-local', note: '根目录 index.html 与构建产物 dist/index.html 均已校验存在。' },

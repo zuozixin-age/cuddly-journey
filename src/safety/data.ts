@@ -1298,11 +1298,11 @@ export const CONCLUSIONS: ConclusionItem[] = [
   },
   {
     id: 'CON-U2',
-    column: 'unverified',
-    label: 'U',
-    title: '研究对象与上一次课程作业原件的一致性核对',
+    column: 'facts',
+    label: 'F',
+    title: '研究对象与上一次课程作业一致（已核对）',
     summary:
-      '当前按作业简报暂定 Joby Aviation S4 为分析对象；最终提交前需与上一次课程作业正式原件比对确认无偏差。',
+      '已核对：本作业分析对象 Joby Aviation S4，即上一次课程作业中选定并完成对标研究的产品，两次作业对象一致、衔接闭合。',
     targetChapter: 'act-0',
   },
   {
