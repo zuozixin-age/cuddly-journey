@@ -267,8 +267,8 @@ export default function App() {
         <div className="mx-auto flex max-w-[1360px] flex-wrap items-center justify-between gap-2 px-4 py-2 text-xs text-[#84909B] sm:px-6 lg:px-8">
           <p className="text-[#9AA6B2]">
             {is3dActive
-              ? '3D 连续滚轮放映模式 · 纯静态离线课程研究 · 暂定对象：Joby Aviation S4 eVTOL（[D] 概念教学模型，非官方评估）'
-              : '2D 轻量连续滚轮模式 · 纯静态离线课程研究 · 暂定对象：Joby Aviation S4 eVTOL（非官方评估）'}
+              ? '3D 连续滚轮放映模式 · 纯静态离线课程研究 · 研究对象：Joby Aviation S4 eVTOL（[D] 概念教学模型，非官方评估）'
+              : '2D 轻量连续滚轮模式 · 纯静态离线课程研究 · 研究对象：Joby Aviation S4 eVTOL（非官方评估）'}
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
